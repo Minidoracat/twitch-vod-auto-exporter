@@ -1,9 +1,14 @@
 // ==UserScript==
 // @name         Twitch VOD 自動匯出助手 (Minidoracat 專用版)
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/Minidoracat
 // @version      0.8.1
 // @description  輔助將 Twitch VOD 匯出到 YouTube，自動填寫日期和遊戲標題（保留原有描述），追蹤已處理影片（可設快取時效），並支援自動化順序匯出、多頁處理、清理快取、單獨清除影片快取及拖動控制面板。新增可客製化的 YouTube 匯出資訊模板及描述附加選項。
 // @author       Minidoracat
+// @homepageURL  https://github.com/Minidoracat/twitch_tampermonkey_script
+// @supportURL   https://github.com/Minidoracat/twitch_tampermonkey_script/issues
+// @icon         https://www.google.com/s2/favicons?sz=64&amp;domain=twitch.tv
+// @downloadURL  https://greasyfork.org/scripts/YOUR_SCRIPT_ID_HERE/twitch_auto_exporter.user.js
+// @updateURL    https://greasyfork.org/scripts/YOUR_SCRIPT_ID_HERE/twitch_auto_exporter.user.js
 // @match        https://dashboard.twitch.tv/u/minidoracat/content/video-producer*
 // @grant        GM.setValue
 // @grant        GM.getValue
