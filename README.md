@@ -1,6 +1,6 @@
 # Twitch VOD 自動匯出助手 By Minidoracat
 
-[![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](https://greasyfork.org/zh-TW/scripts/535600-twitch-vod-%E8%87%AA%E5%8B%95%E5%8C%AF%E5%87%BA%E5%8A%A9%E6%89%8B-minidoracat-%E5%B0%88%E7%94%A8%E7%89%88) <!-- 請在發布後替換 YOUR_SCRIPT_ID_HERE -->
+[![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](https://greasyfork.org/zh-TW/scripts/535600-twitch-vod-%E8%87%AA%E5%8B%95%E5%8C%AF%E5%87%BA%E5%8A%A9%E6%89%8B-minidoracat-%E5%B0%88%E7%94%A8%E7%89%88)
 [![GitHub](https://img.shields.io/badge/GitHub-Repo-blue.svg)](https://github.com/Minidoracat/twitch-vod-auto-exporter)
 [![Discord](https://img.shields.io/badge/Discord-Join-blue.svg)](https://discord.gg/Gur2V67)
 
