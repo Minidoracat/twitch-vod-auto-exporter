@@ -1,15 +1,15 @@
 // ==UserScript==
-// @name         Twitch VOD 自動匯出助手 (Minidoracat 專用版)
+// @name         Twitch VOD 自動匯出助手 By Minidoracat
 // @namespace    https://github.com/Minidoracat
 // @version      0.8.1
 // @description  輔助將 Twitch VOD 匯出到 YouTube，自動填寫日期和遊戲標題（保留原有描述），追蹤已處理影片（可設快取時效），並支援自動化順序匯出、多頁處理、清理快取、單獨清除影片快取及拖動控制面板。新增可客製化的 YouTube 匯出資訊模板及描述附加選項。
 // @author       Minidoracat
-// @homepageURL  https://github.com/Minidoracat/twitch_tampermonkey_script
-// @supportURL   https://github.com/Minidoracat/twitch_tampermonkey_script/issues
+// @homepageURL  https://github.com/Minidoracat/twitch-vod-auto-exporter
+// @supportURL   https://github.com/Minidoracat/twitch-vod-auto-exporter/issues
 // @icon         https://www.google.com/s2/favicons?sz=64&amp;domain=twitch.tv
-// @downloadURL  https://greasyfork.org/scripts/YOUR_SCRIPT_ID_HERE/twitch_auto_exporter.user.js
-// @updateURL    https://greasyfork.org/scripts/YOUR_SCRIPT_ID_HERE/twitch_auto_exporter.user.js
-// @match        https://dashboard.twitch.tv/u/minidoracat/content/video-producer*
+// @downloadURL  https://greasyfork.org/zh-TW/scripts/535600-twitch-vod-%E8%87%AA%E5%8B%95%E5%8C%AF%E5%87%BA%E5%8A%A9%E6%89%8B-minidoracat-%E5%B0%88%E7%94%A8%E7%89%88
+// @updateURL    https://greasyfork.org/zh-TW/scripts/535600-twitch-vod-%E8%87%AA%E5%8B%95%E5%8C%AF%E5%87%BA%E5%8A%A9%E6%89%8B-minidoracat-%E5%B0%88%E7%94%A8%E7%89%88
+// @match        https://dashboard.twitch.tv/u/*/content/video-producer*
 // @grant        GM.setValue
 // @grant        GM.getValue
 // @grant        GM.addStyle
@@ -40,7 +40,7 @@
     const YOUTUBE_VISIBILITY = "private"; // "private" 或 "public"
     const YOUTUBE_APPEND_TO_EXISTING_DESCRIPTION = true; // true: 附加到原有描述之後, false: 完全覆蓋原有描述
 
-    const PROCESSED_VIDEOS_STORAGE_KEY = 'twitch_youtube_exporter_processed_videos_minidoracat_v3';
+    const PROCESSED_VIDEOS_STORAGE_KEY = 'twitch_youtube_exporter_processed_videos_v3';
     let isAutoExporting = false;
     let autoExportQueue = [];
     let currentExportPromise = null;
@@ -143,7 +143,7 @@
         .clear-single-cache-button-minidoracat:hover {
             background-color: #c0392b;
         }
-        a[href*="/u/minidoracat/content/video-producer/edit/"] div[data-target="video-card"] {
+        a[href*="/u/*/content/video-producer/edit/"] div[data-target="video-card"] {
             position: relative !important;
         }
     `);
@@ -526,7 +526,7 @@
             await initialScanAndAttachListeners(true);
 
             const processedVideos = await getProcessedVideosWithExpiryCheck();
-            const allVideoCardElementsOnPage = document.querySelectorAll('a[href*="/u/minidoracat/content/video-producer/edit/"]');
+            const allVideoCardElementsOnPage = document.querySelectorAll('a[href*="/u/*/content/video-producer/edit/"]');
 
             const videosToProcessOnThisPage = Array.from(allVideoCardElementsOnPage).filter(cardElement => {
                 const videoId = cardElement.querySelector('div[data-video-id]')?.dataset.videoId;
@@ -611,7 +611,7 @@
 
     async function initialScanAndAttachListeners(forceUpdate = false) {
         const processedVideos = await getProcessedVideosWithExpiryCheck();
-        const allVideoCardElements = document.querySelectorAll('a[href*="/u/minidoracat/content/video-producer/edit/"]');
+        const allVideoCardElements = document.querySelectorAll('a[href*="/u/*/content/video-producer/edit/"]');
         if (forceUpdate) console.log("強制更新標籤..."); else console.log(`初始掃描：找到 ${allVideoCardElements.length} 卡片。`);
         allVideoCardElements.forEach(cardElement => {
             if (forceUpdate || cardElement.dataset.scriptProcessed !== 'true') {
@@ -634,10 +634,10 @@
                 if (mutation.addedNodes.length > 0) {
                     mutation.addedNodes.forEach(node => {
                         if (node.nodeType === Node.ELEMENT_NODE) {
-                            if (node.querySelector('a[href*="/u/minidoracat/content/video-producer/edit/"]')) {
+                            if (node.querySelector('a[href*="/u/*/content/video-producer/edit/"]')) {
                                 significantChange = true;
                             }
-                            if (node.matches && node.matches('a[href*="/u/minidoracat/content/video-producer/edit/"]')) {
+                            if (node.matches && node.matches('a[href*="/u/*/content/video-producer/edit/"]')) {
                                 significantChange = true;
                             }
                         }
@@ -646,10 +646,10 @@
                 if (mutation.removedNodes.length > 0) {
                     mutation.removedNodes.forEach(node => {
                         if (node.nodeType === Node.ELEMENT_NODE) {
-                            if (node.querySelector('a[href*="/u/minidoracat/content/video-producer/edit/"]')) {
+                            if (node.querySelector('a[href*="/u/*/content/video-producer/edit/"]')) {
                                 significantChange = true;
                             }
-                            if (node.matches && node.matches('a[href*="/u/minidoracat/content/video-producer/edit/"]')) {
+                            if (node.matches && node.matches('a[href*="/u/*/content/video-producer/edit/"]')) {
                                 significantChange = true;
                             }
                         }

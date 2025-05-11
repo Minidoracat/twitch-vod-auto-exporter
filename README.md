@@ -1,7 +1,7 @@
-# Twitch VOD 自動匯出助手 (Minidoracat 專用版)
+# Twitch VOD 自動匯出助手 By Minidoracat
 
-[![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](https://greasyfork.org/zh-TW/scripts/YOUR_SCRIPT_ID_HERE) <!-- 請在發布後替換 YOUR_SCRIPT_ID_HERE -->
-[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue.svg)](https://github.com/Minidoracat/twitch_tampermonkey_script) <!-- 假設這是您的倉庫 -->
+[![Tampermonkey](https://img.shields.io/badge/Tampermonkey-Script-orange.svg)](https://greasyfork.org/zh-TW/scripts/535600-twitch-vod-%E8%87%AA%E5%8B%95%E5%8C%AF%E5%87%BA%E5%8A%A9%E6%89%8B-minidoracat-%E5%B0%88%E7%94%A8%E7%89%88) <!-- 請在發布後替換 YOUR_SCRIPT_ID_HERE -->
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-blue.svg)](https://github.com/Minidoracat/twitch-vod-auto-exporter)
 [![Discord](https://img.shields.io/badge/Discord-Join-blue.svg)](https://discord.gg/Gur2V67)
 
 大家好！我是 Minidoracat。
@@ -11,7 +11,7 @@
 
 ## 簡介
 
-Twitch VOD 自動匯出助手是一個油猴 (Tampermonkey) 腳本，專為 Minidoracat 的 Twitch 儀表板設計。
+Twitch VOD 自動匯出助手是一個油猴 (Tampermonkey) 腳本，專為 Twitch 儀表板設計。
 它旨在輔助將 Twitch VOD 快速、方便地匯出到 YouTube，並自動化許多重複性的填寫工作，特別是在需要大量轉移影片時。
 
 ## 功能
@@ -43,13 +43,13 @@ Twitch VOD 自動匯出助手是一個油猴 (Tampermonkey) 腳本，專為 Mini
     *   [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
 2.  點擊以下連結安裝此腳本 (請在發布到 Greasy Fork 後更新此連結)：
 
-    [從 Greasy Fork 安裝腳本](https://greasyfork.org/zh-TW/scripts/YOUR_SCRIPT_ID_HERE) <!-- 請在發布後替換 YOUR_SCRIPT_ID_HERE -->
+    [從 Greasy Fork 安裝腳本](https://greasyfork.org/zh-TW/scripts/535600-twitch-vod-%E8%87%AA%E5%8B%95%E5%8C%AF%E5%87%BA%E5%8A%A9%E6%89%8B-minidoracat-%E5%B0%88%E7%94%A8%E7%89%88) <!-- 請在發布後替換 YOUR_SCRIPT_ID_HERE -->
     或者，如果您想從 GitHub 安裝最新開發版：
-    [從 GitHub 安裝腳本](https://github.com/Minidoracat/twitch_tampermonkey_script/raw/main/twitch_auto_exporter.user.js) <!-- 假設 main 是您的主要分支 -->
+    [從 GitHub 安裝腳本](https://github.com/Minidoracat/twitch-vod-auto-exporter/raw/main/twitch_auto_exporter.user.js) <!-- 假設 main 是您的主要分支 -->
 
 ## 使用方法
 
-1.  安裝腳本後，前往您的 Twitch 影片製作人頁面：`https://dashboard.twitch.tv/u/minidoracat/content/video-producer`。
+1.  安裝腳本後，前往您的 Twitch 影片製作人頁面：`https://dashboard.twitch.tv/u/YOUR_USERNAME_HERE/content/video-producer (將 YOUR_USERNAME_HERE 替換成您的 Twitch 使用者名稱)`。
 2.  腳本會在頁面右下角顯示一個「匯出控制面板」。
     *   **開始自動匯出**: 點擊此按鈕，腳本將開始掃描目前頁面的影片，並依序處理未被標記為「已處理」的影片，自動完成匯出到 YouTube 的流程。處理完畢會自動翻到下一頁。
     *   **停止自動匯出**: 在自動匯出過程中，點擊此按鈕可以中斷。
@@ -71,7 +71,7 @@ Twitch VOD 自動匯出助手是一個油猴 (Tampermonkey) 腳本，專為 Mini
 
 歡迎對本專案提出貢獻。請遵循以下步驟：
 
-1.  Fork 本倉庫 ([`Minidoracat/twitch_tampermonkey_script`](https://github.com/Minidoracat/twitch_tampermonkey_script))。
+1.  Fork 本倉庫 ([`Minidoracat/twitch-vod-auto-exporter`](https://github.com/Minidoracat/twitch-vod-auto-exporter))。
 2.  創建您的功能分支 (`git checkout -b feature/AmazingFeature`)。
 3.  提交您的修改 (`git commit -m 'Add some AmazingFeature'`)。
 4.  推送到分支 (`git push origin feature/AmazingFeature`)。
