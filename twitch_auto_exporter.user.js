@@ -7,8 +7,6 @@
 // @homepageURL  https://github.com/Minidoracat/twitch-vod-auto-exporter
 // @supportURL   https://github.com/Minidoracat/twitch-vod-auto-exporter/issues
 // @icon         https://www.google.com/s2/favicons?sz=64&amp;domain=twitch.tv
-// @downloadURL  https://greasyfork.org/zh-TW/scripts/535600-twitch-vod-%E8%87%AA%E5%8B%95%E5%8C%AF%E5%87%BA%E5%8A%A9%E6%89%8B-minidoracat-%E5%B0%88%E7%94%A8%E7%89%88
-// @updateURL    https://greasyfork.org/zh-TW/scripts/535600-twitch-vod-%E8%87%AA%E5%8B%95%E5%8C%AF%E5%87%BA%E5%8A%A9%E6%89%8B-minidoracat-%E5%B0%88%E7%94%A8%E7%89%88
 // @match        https://dashboard.twitch.tv/u/*/content/video-producer*
 // @grant        GM.setValue
 // @grant        GM.getValue
