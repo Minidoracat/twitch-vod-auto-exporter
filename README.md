@@ -49,7 +49,7 @@ Twitch VOD 自動匯出助手是一個油猴 (Tampermonkey) 腳本，專為 Twit
 
 ## 使用方法
 
-1.  安裝腳本後，前往您的 Twitch 影片製作人頁面：`https://dashboard.twitch.tv/u/YOUR_USERNAME_HERE/content/video-producer (將 YOUR_USERNAME_HERE 替換成您的 Twitch 使用者名稱)`。
+1.  安裝腳本後，前往您的 Twitch 影片製作人頁面：`https://dashboard.twitch.tv/u/YOUR_USERNAME_HERE/content/video-producer (將 YOUR_USERNAME_HERE 替換成您的 Twitch 使用者名稱)`。也就是您的`創意剪輯快手`頁面。
 2.  腳本會在頁面右下角顯示一個「匯出控制面板」。
     *   **開始自動匯出**: 點擊此按鈕，腳本將開始掃描目前頁面的影片，並依序處理未被標記為「已處理」的影片，自動完成匯出到 YouTube 的流程。處理完畢會自動翻到下一頁。
     *   **停止自動匯出**: 在自動匯出過程中，點擊此按鈕可以中斷。
