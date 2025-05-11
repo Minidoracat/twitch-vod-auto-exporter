@@ -79,4 +79,4 @@ Twitch VOD 自動匯出助手是一個油猴 (Tampermonkey) 腳本，專為 Twit
 
 ## 授權
 
-本專案採用 MIT 授權。詳細資訊請參閱 [`LICENSE`](LICENSE) 檔案 (如果有的話，或者您可以自行添加一個)。
+本專案採用 MIT 授權。詳細資訊請參閱 [`LICENSE`](LICENSE) 檔案
